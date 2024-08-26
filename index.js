@@ -394,7 +394,7 @@ let verifycontent = 0;
 /** verify DomElement */
 async function verifyDomElement(){
 
-    let fatherContainer = document.body.querySelector(`.woocommerce-product-gallery`);
+    let fatherContainer = document.body.querySelector(`.mudiCustomClass`);
     let skuNumber       = document.body.querySelector(`.sku`);
 
     if( !fatherContainer && !skuNumber ) {
