@@ -160,7 +160,7 @@ class MudiExperience{
                                 <div class="iconTitle">
                                     <img class="stepMudi step1" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mundialdemercancias@latest/assets/step3.webp">
                                 </div>
-                                <p class="textInfoMudi">Apunta el teléfono al piso.</p>
+                                <p class="textInfoMudi">Apunta el teléfono a una superficie plana.</p>
                             </div>
 
                             <div class="titleContainer">
