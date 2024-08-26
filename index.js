@@ -43,7 +43,7 @@ class MudiExperience{
         link = document.createElement('LINK');
         link.setAttribute('rel','stylesheet');
         link.id="stylesMudiGeneral";
-        link.href=`https://cdn.jsdelivr.net/gh/RodriguezJose92/mudialdemercancias@latest/index.css`; /* custom this path */
+        link.href=`https://cdn.jsdelivr.net/gh/RodriguezJose92/mundialdemercancias@latest/index.css`; /* custom this path */
        
         document.head.appendChild(link)
     };
@@ -158,28 +158,28 @@ class MudiExperience{
 
                             <div class="titleContainer">
                                 <div class="iconTitle">
-                                    <img class="stepMudi step1" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mudialdemercancias@latest/assets/step3.webp">
+                                    <img class="stepMudi step1" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mundialdemercancias@latest/assets/step3.webp">
                                 </div>
                                 <p class="textInfoMudi">Apunta el teléfono al piso.</p>
                             </div>
 
                             <div class="titleContainer">
                                 <div class="iconTitle">
-                                    <img class="stepMudi step2" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mudialdemercancias@latest/assets/step4.webp">
+                                    <img class="stepMudi step2" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mundialdemercancias@latest/assets/step4.webp">
                                 </div>
                                 <p class="textInfoMudi">Desplaza para visualizar.</p>
                             </div>
 
                             <div class="titleContainer">
                                 <div class="iconTitle">
-                                    <img class="stepMudi step3" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mudialdemercancias@latest/assets/step2.webp">
+                                    <img class="stepMudi step3" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mundialdemercancias@latest/assets/step2.webp">
                                 </div>
                                 <p class="textInfoMudi">Amplia y detalla el producto.</p>
                             </div>
 
                             <div class="titleContainer">
                                 <div class="iconTitle">
-                                    <img class="stepMudi step4" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mudialdemercancias@latest/assets/step1.webp">
+                                    <img class="stepMudi step4" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mundialdemercancias@latest/assets/step1.webp">
                                 </div>
                                 <p class="textInfoMudi">Toca dos veces para restablecer.</p>
                             </div>
@@ -245,7 +245,7 @@ class MudiExperience{
     addExternalDrive( container ){
 
         let link3DNormal = 'https://viewer.mudi.com.co/v1/web/?id=356&sku=COND-PT220V5T-12',
-        linkExternalDrive = 'https://3danimados.mudi.com.co/mudialdemercancias/CompresorTipoScroll/' ;
+        linkExternalDrive = 'https://3danimados.mudi.com.co/mundialdemercancias/CompresorTipoScroll/' ;
 
         const div = document.createElement('DIV');
         div.classList.add('externalDriveButton')
