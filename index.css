@@ -44,7 +44,16 @@
     line-height: 16px;
 }
 
-
+.tooltipMudi::after {
+    content: "_";
+    position: absolute;
+    bottom: -15%;
+    right: 10%;
+    width: 10px;
+    border-bottom-right-radius: 50px;
+    background-color: #bebcbe;
+    color: transparent;
+}
 
 /* estilos del modal */
 
@@ -191,6 +200,9 @@
     width: 30px;
 }
 
+.hrTitle {
+    margin-botton: 20px
+}
 
 @media screen and (min-width:1400px) and (max-width:1700px) {
     .containerQRMudi {
