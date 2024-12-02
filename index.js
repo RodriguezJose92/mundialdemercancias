@@ -389,36 +389,35 @@ const mudiExperience = new MudiExperience();
 /** _____________________ Init Experience  ______________________ */
 
 
-let verifycontent = 0;
+let verifycontent = 0; // Declarar la variable globalmente
 
-/** verify DomElement */
-async function verifyDomElement(){
-
+async function verifyDomElement() {
+    // Buscar el contenedor principal
     let fatherContainer = document.body.querySelector(`.mudiCustomClass`);
-    let skuNumber       = document.body.querySelector(`.sku`);
 
-    if( !fatherContainer && !skuNumber ) {
-        requestAnimationFrame(verifyDomElement);
+    // Buscar y extraer el SKU del input
+    let skuNumber = JSON.parse(document.querySelector('input[name="gtm4wp_product_data"]')?.getAttribute('value')?.replace(/&quot;/g, '"') || '{}').sku;
+
+    // Si no se encuentran el contenedor o el SKU, reintentar
+    if (!fatherContainer || !skuNumber) {
+        if (verifycontent >= 1500) {
+            console.warn(`Mudi Warning: El elemento HTML no se ha encontrado en el DOM`);
+            return;
+        }
         verifycontent++;
-        return;
-    }
-    
-    else if ( verifycontent == 1500){
-        console.warn(`Mudi Warning: El elemento HTML no se ha encontrado en el DOM`);
+        requestAnimationFrame(verifyDomElement);
         return;
     }
 
-    // Elimina cualquier tipo de espacio o carácter especial similar
-    let cleanSku = skuNumber.innerHTML
-        .replace(/[\s\uFEFF\xA0]+/g, '') // Elimina cualquier espacio, incluyendo los no estándar
+    // Eliminar espacios no deseados del SKU
+    let cleanSku = skuNumber.replace(/[\s\uFEFF\xA0]+/g, '');
 
+    // Ejecutar la experiencia Mudi con el SKU y el contenedor encontrados
     await mudiExperience.experienceOn(cleanSku, fatherContainer);
+}
 
-}; 
-
+// Ejecutar la verificación después de 2 segundos
 setTimeout(async () => {
     await verifyDomElement();
 }, 2000);
-
-
 
