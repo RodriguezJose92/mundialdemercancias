@@ -6,6 +6,7 @@ class MudiExperience{
         this.dataSever          = null;
         this.skuNumber          = null;
         this.fatherContainer    = null;
+        this.counterIFrame      = 0;
     };
 
     /** Conect mudiServer  ✔️ */
@@ -355,6 +356,25 @@ class MudiExperience{
         })
     };
 
+    createIframeBigCenter(){
+        const container = document.querySelector('.vista3dcon');
+
+        if( this.counterIFrame > 500){ return }
+        else if(!container){
+            requestAnimationFrame(this.createIframeBigCenter.bind(this));
+            this.counterIFrame++
+            return
+        };
+
+        const iframe = document.createElement('IFRAME');
+        iframe.id="iframeMudi3D";
+        iframe.classList.add('iframeMudi3D');
+        iframe.src=`https://viewer.mudi.com.co/v1/web/?id=436&sku=${this.skuNumber}`;
+
+        container.appendChild(iframe)
+
+    };
+
     /** verifyExperience  ✔️ */
     async experienceOn(skuNumber, fatherContainer){
     
@@ -375,6 +395,8 @@ class MudiExperience{
         this.createStyles();
         /** Create Buttons */
         this.createBtns();
+
+        this.createIframeBigCenter();
 
         /** Viewer event GTM  */
         this.sendEventViewer();
@@ -420,4 +442,3 @@ async function verifyDomElement() {
 setTimeout(async () => {
     await verifyDomElement();
 }, 2000);
-
