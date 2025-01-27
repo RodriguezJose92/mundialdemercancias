@@ -418,7 +418,7 @@ async function verifyDomElement() {
     let fatherContainer = document.body.querySelector(`.mudiCustomClass`);
     let skuNumber;
     if( location.origin.includes('https://selling.bigcenter.com.co/')){
-        skuNumber = JSON.parse(document.querySelector('.sku')?.getAttribute('value')?.replace(/&quot;/g, '"') || '{}').sku;
+        skuNumber = document.querySelector('.sku').innerText;
     }else{
         skuNumber = JSON.parse(document.querySelector('input[name="gtm4wp_product_data"]')?.getAttribute('value')?.replace(/&quot;/g, '"') || '{}').sku;
     }    
