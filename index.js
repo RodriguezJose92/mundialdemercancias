@@ -70,10 +70,10 @@ class MudiExperience{
                             opacity:.6;
                         }
                         
-                        .cls-1,.cls-2,.cls-3{
+                        .cls-1,.cls-2mudi,.cls-3{
                             stroke-width:0px;
                         }
-                        .cls-2{
+                        .cls-2mudi{
                             fill:#f4f4f4;
                         }
                         .cls-3{
@@ -121,7 +121,7 @@ class MudiExperience{
                     <defs>
                         <style>
                         .cls-1_modal{fill:${this.color};stroke:${this.color};stroke-miterlimit:10;stroke-width:3px;}
-                        .cls-2_modal{font-family:FrutigerBold, Frutiger;font-size:19.04px;fill:white}
+                        .cls-2mudi_modal{font-family:FrutigerBold, Frutiger;font-size:19.04px;fill:white}
                         .cls-3_modal{stroke-width:0px;fill:white;}
                         </style>
                     </defs>
@@ -231,12 +231,12 @@ class MudiExperience{
             ? (
                 document.body.querySelector('.cls-1_modal').style.fill=color,
                 icon.forEach((icon)=>icon.style.fill="white"),
-                document.body.querySelector('.cls-2_modal').style.fill="white"
+                document.body.querySelector('.cls-2mudi_modal').style.fill="white"
             ) 
             : (
                 document.body.querySelector('.cls-1_modal').style.fill="white",
                 icon.forEach((icon)=>icon.style.fill=color),
-                document.body.querySelector('.cls-2_modal').style.fill=color
+                document.body.querySelector('.cls-2mudi_modal').style.fill=color
             )
         };
 
