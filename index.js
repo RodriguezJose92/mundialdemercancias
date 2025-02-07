@@ -65,27 +65,21 @@ class MudiExperience{
             <svg id="img3DBtn" class="btnMudi3D" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
                 <defs>
                   <style>
-    /* Asegurar que el color se aplique con mayor especificidad */
-    svg .cls-1 {
-        fill: ${this.color};
-        opacity: .6;
-    }
-
-    svg .cls-1, 
-    svg .cls-2, 
-    svg .cls-3 {
-        stroke-width: 0px;
-    }
-
-    svg .cls-2,
-    path.cls-2 {
-        fill: #f4f4f4 !important;
-    }
-
-    svg .cls-3 {
-        fill: ${this.color};
-    }
-</style>
+                         .cls-1{
+                            fill:${this.color};
+                            opacity:.6;
+                        }
+                        
+                        .cls-1,.cls-2,.cls-3{
+                            stroke-width:0px;
+                        }
+                        .cls-2{
+                            fill:#f4f4f4;
+                        }
+                        .cls-3{
+                            fill:${this.color};
+                        }
+                     </style>
 
                 </defs>
                <circle class="cls-2" cx="170" cy="178.45" r="150.5" fill="#f4f4f4"/>
