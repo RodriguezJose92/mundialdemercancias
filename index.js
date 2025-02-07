@@ -64,21 +64,26 @@ class MudiExperience{
         <?xml version="1.0" encoding="UTF-8"?>
             <svg id="img3DBtn" class="btnMudi3D" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
                 <defs>
-                   <style>
-    .cls-1 {
+                  <style>
+    /* Asegurar que el color se aplique con mayor especificidad */
+    svg .cls-1 {
         fill: ${this.color};
         opacity: .6;
     }
-    
-    .cls-1, .cls-2, .cls-3 {
+
+    svg .cls-1, 
+    svg .cls-2, 
+    svg .cls-3 {
         stroke-width: 0px;
     }
 
-    .cls-2 {
+    /* Asegurar que el fill de .cls-2 no sea sobrescrito */
+    svg .cls-2,
+    path.cls-2 {
         fill: #f4f4f4 !important;
     }
 
-    .cls-3 {
+    svg .cls-3 {
         fill: ${this.color};
     }
 </style>
@@ -92,6 +97,10 @@ class MudiExperience{
                 </g>
             </svg>
         `;
+        
+document.querySelectorAll(".cls-2").forEach(el => {
+    el.setAttribute("fill", "#f4f4f4");
+});
 
         containerBtns.querySelector('#img3DBtn').addEventListener('click',()=>{
             
