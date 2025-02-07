@@ -418,7 +418,7 @@ let verifycontent = 0; // Declarar la variable globalmente
 
 async function verifyDomElement() {
     // Buscar el contenedor principal
-    let fatherContainer = document.body.querySelector(`.mudiCustomClass`);
+    let fatherContainer = document.body.querySelector(`.mudiCustomClass2`);
     let skuNumber;
     if( location.origin.includes('https://selling.bigcenter.com.co/')){
         skuNumber = document.querySelector('.sku').innerText;
