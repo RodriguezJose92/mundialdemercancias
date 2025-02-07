@@ -2,7 +2,7 @@
 class MudiExperience{
 
     constructor(){
-        this.color              = "#0071CE"; 
+        this.color              = "#f4f4f4"; 
         this.dataSever          = null;
         this.skuNumber          = null;
         this.fatherContainer    = null;
@@ -66,7 +66,7 @@ class MudiExperience{
                 <defs>
                   <style>
                          .cls-1{
-                            fill:${this.color};
+                            fill:#0071CE;
                             opacity:.6;
                         }
                         
@@ -77,7 +77,7 @@ class MudiExperience{
                             fill:#f4f4f4;
                         }
                         .cls-3{
-                            fill:${this.color};
+                            fill:#0071CE;
                         }
                      </style>
 
@@ -117,13 +117,13 @@ class MudiExperience{
         modalMudi.classList.add(`mudiModal`);
         modalMudi.innerHTML=`
             <div class="iframeMudi3D">
-                <button class="closeModalMudi" style="color:${this.color}">X</button>
+                <button class="closeModalMudi" style="color:#0071CE">X</button>
                 <iframe class="modelMudi" src="${this.dataServer.URL_WEB}"></iframe>
                 <div class="containerBtnsActions">
                     <svg xmlns="http://www.w3.org/2000/svg" id="imgARBtn" class="imgBtnAR" viewBox="0 0 317 112">
                     <defs>
                         <style>
-                        .cls-1_modal{fill:${this.color};stroke:${this.color};stroke-miterlimit:10;stroke-width:3px;}
+                        .cls-1_modal{fill:#0071CE;stroke:#0071CE;stroke-miterlimit:10;stroke-width:3px;}
                         .cls-2_modal{font-family:FrutigerBold, Frutiger;font-size:19.04px;fill:white}
                         .cls-3_modal{stroke-width:0px;fill:white;}
                         </style>
@@ -151,7 +151,7 @@ class MudiExperience{
                         <text class="cls-2_modal" transform="translate(103.37 58.47)"><tspan x="0" y="0">VER EN TU ESPACIO</tspan></text>
                     </svg>
 
-                    <div id="containerQR" class="containerQRMudi" style="background-color:${this.color}">
+                    <div id="containerQR" class="containerQRMudi" style="background-color:#0071CE">
                         <img class="mudiQR" src="${this.dataServer.URL_QR}" >
 
                         <div class="containerText">
