@@ -366,6 +366,8 @@ class MudiExperience{
             return
         };
 
+        container.innerHTML = ``;
+
         const iframe = document.createElement('IFRAME');
         iframe.id="iframeMudi3D";
         iframe.classList.add('iframeMudi3D');
